@@ -1,35 +1,31 @@
 // @app
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
   View,
-  Image,
   ImageBackground,
   Text,
 } from 'react-native';
+
 import { styles } from './styles';
-import Colors from '../../styles/Colors';
+import Button from '../../components/Button';
+
 const Welcome = ({ navigation }) => {
-
-
   return (
     <View style={styles.container}>
-      <Image
-        style={{ height: '100%', width: "100%" }}
+      <ImageBackground
+        style={styles.welcomeBg}
         resizeMode='cover'
-        source={require('../../assets/welcome.png')} />
-      <Text style={{
-        color: Colors.primary,
-        fontSize: 36, fontStyle: 'normal',
-        fontWeight: '400',
-        lineHeight: 'normal'
+        source={require('../../assets/welcome.png')} >
 
-        //  
-        // font-family: Luckiest Guy;
-        // font-size: 36px;
-        // font-style: normal;
-        // font-weight: 400;
-        // line-height: normal;
-      }}>EDUCATION KIDS</Text>
+        <Text style={styles.welcomeHeading}>EDUCATION KIDS</Text>
+
+        <Button
+          callBack={() => navigation.navigate('Menu')}
+          title={`Get Started`}
+          titleStyle={styles.titleStyle}
+          customStyle={styles.customStyle}
+        />
+      </ImageBackground>
     </View >
   );
 };

@@ -4,7 +4,7 @@ import {
 import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 import Welcome from '../../pages/Welcome/Welcome';
-// import Welcome from '../../pages/Welcome/Welcome';
+import Menu from '../../pages/Menu/Menu';
 
 export default function Navigation() {
   return (
@@ -23,6 +23,7 @@ function RootNavigator() {
       initialRouteName='Welcome'
     >
       <Stack.Screen name="Welcome" component={Welcome} />
+      <Stack.Screen name="Menu" component={Menu} />
     </Stack.Navigator>
   );
 }
