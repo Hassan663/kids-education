@@ -10,10 +10,9 @@ export const styles = StyleSheet.create({
     customStyle: {
         alignSelf: 'center',
         padding: RFPercentage(1),
-        paddingHorizontal: RFPercentage(4),
+        paddingHorizontal: RFPercentage(5),
         backgroundColor: Colors.white,
-        overflow: 'hidden',
-        marginTop: '20%',
+        marginTop: '5%',
         borderRadius: RFPercentage(3)
     },
 });

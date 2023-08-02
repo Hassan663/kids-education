@@ -2,18 +2,17 @@ import { StyleSheet } from 'react-native';
 import { RFPercentage } from 'react-native-responsive-fontsize';
 import Colors from '../../styles/Colors';
 export const styles = StyleSheet.create({
-    titleStyle: {
+    titleStyle: (color) => ({
         fontSize: 18,
         fontWeight: "800",
-        color: Colors.primary,
-    },
-    customStyle: {
+        color: color&&color,
+    }),
+    customStyle: (color) => ({
         alignSelf: 'center',
         padding: RFPercentage(1),
-        paddingHorizontal: RFPercentage(4),
-        backgroundColor: Colors.white,
-        overflow: 'hidden',
-        marginTop: '20%',
+        paddingHorizontal: RFPercentage(5),
+        backgroundColor: color && color,
+        marginTop: '5%',
         borderRadius: RFPercentage(3)
-    },
+    }),
 });
