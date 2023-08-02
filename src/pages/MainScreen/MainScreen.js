@@ -1,16 +1,18 @@
 // @app
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Image,
   View,
   TouchableOpacity,
   Text,
-  FlatList
+  FlatList,
+  SafeAreaView
 } from 'react-native';
 import Button from '../../components/Button';
 import { styles } from './styles';
 import Colors from '../../styles/Colors';
 import { RFPercentage } from 'react-native-responsive-fontsize';
+import Tts from 'react-native-tts';
 
 export const getRandomColor = () => {
   const letters = '0123456789ABCDEF';
@@ -23,14 +25,23 @@ export const getRandomColor = () => {
 
 const MainScreen = ({ navigation }) => {
   const dataArray = Array.from({ length: 26 }, (_, index) => String.fromCharCode(97 + index)); // 'a' to 'z'
+  const [text, setText] = useState('');
 
+  const handlePlay = () => {
+    // alert()
+    if (text) {
+      Tts.speak('APPLE');
+    }
+  };
   return (
     <View style={{ flex: 1, }}>
       <View style={{ flex: 8, paddingHorizontal: RFPercentage(2) }}>
-        <View style={{ flexDirection: 'row', justifyContent: "space-between", }}>
+        <SafeAreaView style={{ flexDirection: 'row', justifyContent: "space-between", }}>
 
           <Button
-            title={`ENGLISH`}
+            title={`PLAY`}
+
+            callBack={handlePlay}
             titleStyle={styles.titleStyle(Colors.white)}
             customStyle={styles.customStyle('#36C02A')}
           />
@@ -39,7 +50,7 @@ const MainScreen = ({ navigation }) => {
             titleStyle={styles.titleStyle(Colors.black)}
             customStyle={styles.customStyle('#FFB800')}
           />
-        </View>
+        </SafeAreaView>
         <View style={{
           flex: 4, flexDirection: 'row',
           alignItems: 'center'
