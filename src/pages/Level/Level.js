@@ -5,7 +5,8 @@ import {
   View,
   TouchableOpacity,
   Text,
-  FlatList
+  FlatList,
+  SafeAreaView
 } from 'react-native';
 import Button from '../../components/Button';
 import { styles } from './styles';
@@ -26,7 +27,7 @@ const Level = ({ navigation }) => {
   console.log(dataArray, 'dataArray')
   return (
     <View style={{ flex: 1, }}>
-      <View style={{ flex: 8, }}>
+      <SafeAreaView style={{ flex: 8, }}>
         <Button
           title={`ENGLISH`}
           titleStyle={styles.titleStyle}
@@ -68,7 +69,7 @@ const Level = ({ navigation }) => {
           titleStyle={styles.titleStyle}
           customStyle={styles.customStyle}
         />
-      </View>
+      </SafeAreaView>
       <View onPress={() => { }} style={{ flex: 2 }}>
         <Image resizeMode='cover' style={{ height: '100%', width: "100%" }} source={require('../../assets/gras.png')} />
       </View>
