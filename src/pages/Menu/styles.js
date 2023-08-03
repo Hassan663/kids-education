@@ -4,6 +4,7 @@ import Colors from '../../styles/Colors';
 export const styles = StyleSheet.create({
     titleStyle: {
         fontSize: 18,
+        fontFamily:'LuckiestGuy-Regular',
         fontWeight: "800",
         color: Colors.primary,
     },

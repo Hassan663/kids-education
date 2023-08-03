@@ -9,10 +9,16 @@ export const styles = StyleSheet.create({
         color: Colors.primary,
         fontSize: RFPercentage(3),
         marginTop: RFPercentage(8),
-        fontWeight: '800',
+        fontFamily: 'LuckiestGuy-Regular',
+          textShadowOffset: { width: 6, height: 2 }, // Shadow offset (X and Y)
+    textShadowRadius: 0, // Blur radius of the shadow
+    textShadowColor: 'rgba(225, 225, 225, 1)', // Shadow color and opacity
+
     },
     titleStyle: {
         fontSize: 18,
+        fontFamily: 'LuckiestGuy-Regular',
+
         fontWeight: "800",
         color: Colors.primary,
     },

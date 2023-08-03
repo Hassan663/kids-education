@@ -59,7 +59,8 @@ const MainScreen = ({ navigation }) => {
           <View style={{ height: RFPercentage(10), justifyContent: "center", padding: RFPercentage(2), marginHorizontal: RFPercentage(3), width: "70%", backgroundColor: Colors.white, borderRadius: RFPercentage(2) }}>
             <Text style={{
               fontSize: 16,
-              color: Colors.black,
+        fontFamily:'LuckiestGuy-Regular',
+        color: Colors.black,
               fontWeight: "800",
             }}>APPLE</Text>
           </View>
