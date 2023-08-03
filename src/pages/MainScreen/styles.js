@@ -4,9 +4,8 @@ import Colors from '../../styles/Colors';
 export const styles = StyleSheet.create({
     titleStyle: (color) => ({
         fontSize: 18,
-        fontFamily:'LuckiestGuy-Regular',
-        fontWeight: "800",
-        color: color&&color,
+        fontFamily: 'LuckiestGuy-Regular',
+        color: color && color,
     }),
     customStyle: (color) => ({
         alignSelf: 'center',

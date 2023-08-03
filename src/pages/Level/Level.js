@@ -56,7 +56,10 @@ const Level = ({ navigation }) => {
                     alignItems: 'center',
                     flex: 1
                   }}>
-                  <Text style={{ textTransform: "uppercase", fontWeight: '800', color: Colors.white }}>{`ALPHABET `}{item}</Text>
+                  <Text style={{
+                    textTransform: "uppercase",
+                    fontFamily: 'LuckiestGuy-Regular', color: Colors.white
+                  }}>{`ALPHABET `}{item}</Text>
                 </TouchableOpacity>
               )
             }}

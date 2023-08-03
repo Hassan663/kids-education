@@ -29,9 +29,9 @@ const MainScreen = ({ navigation }) => {
 
   const handlePlay = () => {
     // alert()
-    if (text) {
+    // if (text) {
       Tts.speak('APPLE');
-    }
+    // }
   };
   return (
     <View style={{ flex: 1, }}>
@@ -59,9 +59,8 @@ const MainScreen = ({ navigation }) => {
           <View style={{ height: RFPercentage(10), justifyContent: "center", padding: RFPercentage(2), marginHorizontal: RFPercentage(3), width: "70%", backgroundColor: Colors.white, borderRadius: RFPercentage(2) }}>
             <Text style={{
               fontSize: 16,
-        fontFamily:'LuckiestGuy-Regular',
-        color: Colors.black,
-              fontWeight: "800",
+              fontFamily: 'LuckiestGuy-Regular',
+              color: Colors.black,
             }}>APPLE</Text>
           </View>
         </View>
