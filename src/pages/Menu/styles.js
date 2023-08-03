@@ -17,4 +17,10 @@ export const styles = StyleSheet.create({
         marginTop: '20%',
         borderRadius: RFPercentage(3)
     },
+    linearGradient: {
+        flex: 1,
+        paddingLeft: 15,
+        paddingRight: 15,
+        borderRadius: 5
+      },
 });

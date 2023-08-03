@@ -12,6 +12,7 @@ import Button from '../../components/Button';
 import { styles } from './styles';
 import { RFPercentage } from 'react-native-responsive-fontsize';
 import Colors from '../../styles/Colors';
+import LinearGradient from 'react-native-linear-gradient';
 
 export const getRandomColor = () => {
   const letters = '0123456789ABCDEF';
@@ -58,53 +59,55 @@ const Level = ({ navigation, route }) => {
   return (
     <View style={{ flex: 1, }}>
       <SafeAreaView style={{ flex: 8, }}>
-        <Button
-          title={route.params.level}
-          titleStyle={styles.titleStyle}
-          customStyle={styles.customStyle}
-        />
-        <View style={{
-          height: '80%',
-          paddingTop: RFPercentage(2),
-        }}>
-          <FlatList
-            data={dataArray}
-            numColumns={2}
-            columnWrapperStyle={{ justifyContent: "space-around", }}
-            renderItem={({ item, index }) => {
-              return (
-                <TouchableOpacity
-                  onPress={() => {
-                    navigation.navigate('MainScreen', { level: route.params.level })
-                  }}
-                  key={index}
-                  style={{
-                    backgroundColor: item?.color, padding: RFPercentage(2),
-                    margin: RFPercentage(2),
-                    borderRadius: RFPercentage(2),
-                    justifyContent: "center",
-                    alignItems: 'center',
-                    flex: 1
-                  }}>
-                  <Text style={{
-                    textTransform: "uppercase",
-                    fontSize: route.params.level == 'Urdu' ? RFPercentage(4) : RFPercentage(3),
-                    fontFamily: 'LuckiestGuy-Regular',
-                    color: Colors.white,
-                    fontWeight: route?.params?.level == 'Urdu' ? 'bold' : null,
-                  }}>{name + "     "} {item?.data}</Text>
-                </TouchableOpacity>
-              )
-            }}
-            keyExtractor={(item, index) => index.toString()}
+        <LinearGradient colors={['#B0CEE3', `rgba(176, 206, 227, 0.00)`]} >
+          <Button
+            title={route.params.level}
+            titleStyle={styles.titleStyle}
+            customStyle={styles.customStyle}
           />
-        </View>
-        <Button
-          callBack={() => navigation.pop()}
-          title={`Back`}
-          titleStyle={styles.titleStyle}
-          customStyle={styles.customStyle}
-        />
+          <View style={{
+            height: '80%',
+            paddingTop: RFPercentage(2),
+          }}>
+            <FlatList
+              data={dataArray}
+              numColumns={2}
+              columnWrapperStyle={{ justifyContent: "space-around", }}
+              renderItem={({ item, index }) => {
+                return (
+                  <TouchableOpacity
+                    onPress={() => {
+                      navigation.navigate('MainScreen', { level: route.params.level })
+                    }}
+                    key={index}
+                    style={{
+                      backgroundColor: item?.color, padding: RFPercentage(2),
+                      margin: RFPercentage(2),
+                      borderRadius: RFPercentage(2),
+                      justifyContent: "center",
+                      alignItems: 'center',
+                      flex: 1
+                    }}>
+                    <Text style={{
+                      textTransform: "uppercase",
+                      fontSize: route.params.level == 'Urdu' ? RFPercentage(4) : RFPercentage(3),
+                      fontFamily: 'LuckiestGuy-Regular',
+                      color: Colors.white,
+                      fontWeight: route?.params?.level == 'Urdu' ? 'bold' : null,
+                    }}>{name + "     "} {item?.data}</Text>
+                  </TouchableOpacity>
+                )
+              }}
+              keyExtractor={(item, index) => index.toString()}
+            />
+          </View>
+          <Button
+            callBack={() => navigation.pop()}
+            title={`Back`}
+            titleStyle={styles.titleStyle}
+            customStyle={styles.customStyle}
+          />
+        </LinearGradient>
       </SafeAreaView>
       <View onPress={() => { }} style={{ flex: 2 }}>
         <Image resizeMode='cover' style={{ height: '100%', width: "100%" }} source={require('../../assets/gras.png')} />
