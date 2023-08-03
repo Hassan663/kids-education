@@ -23,14 +23,14 @@ export const getRandomColor = () => {
   return color;
 };
 
-const MainScreen = ({ navigation }) => {
+const MainScreen = ({ navigation, route }) => {
   const dataArray = Array.from({ length: 26 }, (_, index) => String.fromCharCode(97 + index)); // 'a' to 'z'
   const [text, setText] = useState('');
 
   const handlePlay = () => {
     // alert()
     // if (text) {
-      Tts.speak('APPLE');
+    Tts.speak('APPLE');
     // }
   };
   return (
@@ -46,7 +46,7 @@ const MainScreen = ({ navigation }) => {
             customStyle={styles.customStyle('#36C02A')}
           />
           <Button
-            title={`ENGLISH`}
+            title={route?.params?.level}
             titleStyle={styles.titleStyle(Colors.black)}
             customStyle={styles.customStyle('#FFB800')}
           />

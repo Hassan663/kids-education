@@ -4,10 +4,14 @@ import {
   Image,
   View,
   TouchableOpacity,
-  SafeAreaView
+  SafeAreaView,
+  ImageBackground,
+  Text
 } from 'react-native';
 import Button from '../../components/Button';
 import { styles } from './styles';
+import { RFPercentage } from 'react-native-responsive-fontsize';
+import Colors from '../../styles/Colors';
 const Menu = ({ navigation }) => {
 
 
@@ -21,9 +25,44 @@ const Menu = ({ navigation }) => {
           customStyle={styles.customStyle}
         />
         <TouchableOpacity
-          onPress={() => navigation.navigate('Level')}
+          activeOpacity={0.8}
+          onPress={() => navigation.navigate('Level', { level: 'English' })}
           style={{ alignSelf: "center", }}>
-          <Image resizeMode='contain' style={{ alignSelf: "center", }} source={require('../../assets/menu.png')} />
+          <ImageBackground style={{ alignSelf: "center", justifyContent: 'center', alignItems: 'center', height: 135, width: 285 }} source={require('../../assets/menuABC.png')}  >
+            <Text style={{
+              fontSize: 24,
+              marginTop: '10%',
+              fontFamily: 'LuckiestGuy-Regular',
+              color: Colors.white,
+            }}>English</Text>
+
+          </ImageBackground>
+        </TouchableOpacity>
+        <TouchableOpacity
+          activeOpacity={0.8}
+          onPress={() => navigation.navigate('Level', { level: 'Urdu' })}
+          style={{ alignSelf: "center", }}>
+          <ImageBackground style={{ alignSelf: "center", justifyContent: 'center', alignItems: 'center', height: 135, width: 285 }} source={require('../../assets/MenuUrdu.png')}  >
+            <Text style={{
+              fontSize: 24,
+              marginTop: '10%',
+              fontFamily: 'LuckiestGuy-Regular',
+              color: Colors.white,
+            }}>Urdu</Text>
+          </ImageBackground>
+        </TouchableOpacity>
+        <TouchableOpacity
+          activeOpacity={0.8}
+          onPress={() => navigation.navigate('Level', { level: 'Number' })}
+          style={{ alignSelf: "center", }}>
+          <ImageBackground style={{ alignSelf: "center", justifyContent: 'center', alignItems: 'center', height: 135, width: 285 }} source={require('../../assets/MenuNumber.png')}  >
+            <Text style={{
+              fontSize: 24,
+              marginTop: '10%',
+              fontFamily: 'LuckiestGuy-Regular',
+              color: Colors.white,
+            }}>Number</Text>
+          </ImageBackground>
         </TouchableOpacity>
 
       </SafeAreaView>
