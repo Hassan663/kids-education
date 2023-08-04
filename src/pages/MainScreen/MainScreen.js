@@ -14,6 +14,7 @@ import Colors from '../../styles/Colors';
 import { RFPercentage } from 'react-native-responsive-fontsize';
 import Tts from 'react-native-tts';
 import LinearGradient from 'react-native-linear-gradient';
+import { getItem, setItem } from '../../helpers/AsyncStorage';
 
 export const getRandomColor = () => {
   const letters = '0123456789ABCDEF';
@@ -27,41 +28,68 @@ export const getRandomColor = () => {
 const MainScreen = ({ navigation, route }) => {
   const dataArray = Array.from({ length: 26 }, (_, index) => String.fromCharCode(97 + index)); // 'a' to 'z'
   const [text, setText] = useState('');
+  const [Score, setScore] = useState([]);
+  const getScore = async () => {
+    let getScoreFromAsync = await getItem('Score')
+    if (getScoreFromAsync) {
+      let clearedLevel = []
+      let getindex = getScoreFromAsync?.findIndex((val) => val.data == route?.params?.val?.data)
+      console.log(getindex, 'getindex')
+      if (getindex >= 0) {
+        setScore(getScoreFromAsync)
+
+      }
+      else {
+        if (route.params.val) {
+          clearedLevel = [...getScoreFromAsync, route.params.val]
+          setScore(clearedLevel)
+          setItem('Score', clearedLevel)
+        }
+      }
+    } else {
+      setScore([route.params.val])
+      setItem('Score', [route.params.val])
+    }
+  }
+  console.log(Score, 'Score')
   useEffect(() => {
-    // setIte
-    // if (route.params.level=='Engplis')
-    //   if (route.params.val == `A `) { setText(route.params.val == `for Apple`) }
-    //   else if (route.params.val == `B `) { setText(route.params.val == `for Ball`) }
-    //   else if (route.params.val == `C `) { setText(route.params.val == `for Cat`) }
-    //   else if (route.params.val == `D `) { setText(route.params.val == `for Doll`) }
-    //   else if (route.params.val == `E `) { setText(route.params.val == `for Egg`) }
-    //   else if (route.params.val == `F `) { setText(route.params.val == `for Frog`) }
-    //   else if (route.params.val == `G `) { setText(route.params.val == `for Glass`) }
-    //   else if (route.params.val == `H `) { setText(route.params.val == `for Hat`) }
-    //   else if (route.params.val == `I `) { setText(route.params.val == `for Igloo`) }
-    //   else if (route.params.val == `J `) { setText(route.params.val == `for Jam`) }
-    //   else if (route.params.val == `K `) { setText(route.params.val == `for Kite`) }
-    //   else if (route.params.val == `L `) { setText(route.params.val == `for Lamb`) }
-    //   else if (route.params.val == `M `) { setText(route.params.val == `for Man`) }
-    //   else if (route.params.val == `N `) { setText(route.params.val == `for Net`) }
-    //   else if (route.params.val == `O `) { setText(route.params.val == `for Onion`) }
-    //   else if (route.params.val == `P `) { setText(route.params.val == `for Pen`) }
-    //   else if (route.params.val == `Q `) { setText(route.params.val == `for Queen`) }
-    //   else if (route.params.val == `R `) { setText(route.params.val == `for Ring`) }
-    //   else if (route.params.val == `S `) { setText(route.params.val == `for Star`) }
-    //   else if (route.params.val == `T `) { setText(route.params.val == `for Train`) }
-    //   else if (route.params.val == `U `) { setText(route.params.val == `for Umbrella`) }
-    //   else if (route.params.val == `V `) { setText(route.params.val == `for Van`) }
-    //   else if (route.params.val == `W `) { setText(route.params.val == `for Watch`) }
-    //   else if (route.params.val == `X `) { setText(route.params.val == `for Xylophone`) }
-    //   else if (route.params.val == `Y `) { setText(route.params.val == `for Yacht`) }
-    //   else if (route.params.val == `Z `) { setText(route.params.val == `for Zebra`) }
+    // console.log(route.params, 'route.params.')
+    getScore()
+    // Tts.setDefaultPitch(1.0)
+    Tts.setDefaultRate(0.4, true);
+
+    // if (route.params.val) setItem('Score', route.params.val)
+    if (route.params.level == 'English')
+      if (route.params.val.data.toUpperCase() == `A`) { setText(`Apple`) }
+      else if (route.params.val.data.toUpperCase() == `B`) { setText(`Ball`) }
+      else if (route.params.val.data.toUpperCase() == `C`) { setText(`Cat`) }
+      else if (route.params.val.data.toUpperCase() == `D`) { setText(`Doll`) }
+      else if (route.params.val.data.toUpperCase() == `E`) { setText(`Egg`) }
+      else if (route.params.val.data.toUpperCase() == `F`) { setText(`Frog`) }
+      else if (route.params.val.data.toUpperCase() == `G`) { setText(`Glass`) }
+      else if (route.params.val.data.toUpperCase() == `H`) { setText(`Hat`) }
+      else if (route.params.val.data.toUpperCase() == `I`) { setText(`Igloo`) }
+      else if (route.params.val.data.toUpperCase() == `J`) { setText(`Jam`) }
+      else if (route.params.val.data.toUpperCase() == `K`) { setText(`Kite`) }
+      else if (route.params.val.data.toUpperCase() == `L`) { setText(`Lamb`) }
+      else if (route.params.val.data.toUpperCase() == `M`) { setText(`Man`) }
+      else if (route.params.val.data.toUpperCase() == `N`) { setText(`Net`) }
+      else if (route.params.val.data.toUpperCase() == `O`) { setText(`Onion`) }
+      else if (route.params.val.data.toUpperCase() == `P`) { setText(`Pen`) }
+      else if (route.params.val.data.toUpperCase() == `Q`) { setText(`Queen`) }
+      else if (route.params.val.data.toUpperCase() == `R`) { setText(`Ring`) }
+      else if (route.params.val.data.toUpperCase() == `S`) { setText(`Star`) }
+      else if (route.params.val.data.toUpperCase() == `T`) { setText(`Train`) }
+      else if (route.params.val.data.toUpperCase() == `U`) { setText(`Umbrella`) }
+      else if (route.params.val.data.toUpperCase() == `V`) { setText(`Van`) }
+      else if (route.params.val.data.toUpperCase() == `W`) { setText(`Watch`) }
+      else if (route.params.val.data.toUpperCase() == `X`) { setText(`Xylophone`) }
+      else if (route.params.val.data.toUpperCase() == `Y`) { setText(`Yacht`) }
+      else if (route.params.val.data.toUpperCase() == `Z`) { setText(`Zebra`) }
   }, [])
   const handlePlay = () => {
-    // alert()
-    // if (text) {
-    Tts.speak('APPLE');
-    // }
+    if (text.length > 0) Tts.speak(text);
+    else if (route?.params?.val?.data) { Tts.speak(route.params.val.data.toString()) }
   };
   return (
     <View style={{ flex: 1, }}>
@@ -77,7 +105,7 @@ const MainScreen = ({ navigation, route }) => {
               customStyle={styles.customStyle('#36C02A')}
             />
             <Button
-              title={route?.params?.level}
+              title={Score.length}
               titleStyle={styles.titleStyle(Colors.black)}
               customStyle={styles.customStyle('#FFB800')}
             />
@@ -88,15 +116,26 @@ const MainScreen = ({ navigation, route }) => {
           }}>
             <Image source={require('../../assets/sound.png')} />
             <View style={{ height: RFPercentage(10), justifyContent: "center", padding: RFPercentage(2), marginHorizontal: RFPercentage(3), width: "70%", backgroundColor: Colors.white, borderRadius: RFPercentage(2) }}>
-              <Text style={{
-                fontSize: 16,
-                fontFamily: 'LuckiestGuy-Regular',
-                color: Colors.black,
-              }}>APPLE</Text>
+              {text.length > 0 ?
+                <Text style={{
+                  fontSize: 16,
+                  fontFamily: 'LuckiestGuy-Regular',
+                  color: Colors.black,
+                }}>{text}</Text>
+                :
+                <Text style={{
+                  fontSize: 16,
+                  fontFamily: 'LuckiestGuy-Regular',
+                  color: Colors.black,
+                }}>{route?.params?.val?.data}</Text>
+              }
+
             </View>
           </View>
           <View style={{ flex: 5, alignItems: 'center', justifyContent: "center" }}>
-            <Image source={require('../../assets/apple.png')} />
+            {route.params.level == 'English' &&
+              <Image source={require('../../assets/apple.png')} />
+            }
           </View>
           <Button
             callBack={() => navigation.pop()}

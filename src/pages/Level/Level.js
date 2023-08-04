@@ -90,7 +90,7 @@ const Level = ({ navigation, route }) => {
                     }}>
                     <Text style={{
                       textTransform: "uppercase",
-                      fontSize: route.params.level == 'Urdu' ? RFPercentage(4) : RFPercentage(3),
+                      fontSize: route.params.level == 'Urdu' ? RFPercentage(3) : RFPercentage(2),
                       fontFamily: 'LuckiestGuy-Regular',
                       color: Colors.white,
                       fontWeight: route?.params?.level == 'Urdu' ? 'bold' : null,
