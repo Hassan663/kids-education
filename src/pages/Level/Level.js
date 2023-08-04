@@ -77,7 +77,7 @@ const Level = ({ navigation, route }) => {
                 return (
                   <TouchableOpacity
                     onPress={() => {
-                      navigation.navigate('MainScreen', { level: route.params.level })
+                      navigation.navigate('MainScreen', { level: route.params.level, val: item })
                     }}
                     key={index}
                     style={{
