@@ -88,8 +88,14 @@ const MainScreen = ({ navigation, route }) => {
       else if (route.params.val.data.toUpperCase() == `Z`) { setText(`Zebra`) }
   }, [])
   const handlePlay = () => {
-    if (text.length > 0) Tts.speak(text);
-    else if (route?.params?.val?.data) { Tts.speak(route.params.val.data.toString()) }
+    if (route.params.level == 'Urdu') { UrduCustomVoice()}
+    else {
+      if (text.length > 0) Tts.speak(text);
+      else if (route?.params?.val?.data) { Tts.speak(route.params.val.data.toString()) }
+    }
+  };
+  const UrduCustomVoice = () => {
+   
   };
   return (
     <View style={{ flex: 1, }}>
