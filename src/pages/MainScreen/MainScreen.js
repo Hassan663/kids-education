@@ -57,6 +57,12 @@ const MainScreen = ({ navigation, route }) => {
     getScore()
     // Tts.setDefaultPitch(1.0)
     Tts.setDefaultRate(0.4, true);
+    if (route.params.level == 'Urdu'){
+      Tts.setDefaultLanguage('ur-PK');
+    }
+    else{
+      Tts.setDefaultLanguage('en-US');
+    }
 
     // if (route.params.val) setItem('Score', route.params.val)
     if (route.params.level == 'English')
@@ -88,11 +94,11 @@ const MainScreen = ({ navigation, route }) => {
       else if (route.params.val.data.toUpperCase() == `Z`) { setText(`Zebra`) }
   }, [])
   const handlePlay = () => {
-    if (route.params.level == 'Urdu') { UrduCustomVoice()}
-    else {
+    // if (route.params.level == 'Urdu') { UrduCustomVoice()}
+    // else {
       if (text.length > 0) Tts.speak(text);
       else if (route?.params?.val?.data) { Tts.speak(route.params.val.data.toString()) }
-    }
+    // }
   };
   const UrduCustomVoice = () => {
    
