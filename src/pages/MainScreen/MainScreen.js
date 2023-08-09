@@ -15,6 +15,7 @@ import { RFPercentage } from 'react-native-responsive-fontsize';
 import Tts from 'react-native-tts';
 import LinearGradient from 'react-native-linear-gradient';
 import { getItem, setItem } from '../../helpers/AsyncStorage';
+import { getImage } from './CallBack';
 
 export const getRandomColor = () => {
   const letters = '0123456789ABCDEF';
@@ -57,10 +58,10 @@ const MainScreen = ({ navigation, route }) => {
     getScore()
     // Tts.setDefaultPitch(1.0)
     Tts.setDefaultRate(0.4, true);
-    if (route.params.level == 'Urdu'){
+    if (route.params.level == 'Urdu') {
       Tts.setDefaultLanguage('ur-PK');
     }
-    else{
+    else {
       Tts.setDefaultLanguage('en-US');
     }
 
@@ -96,12 +97,11 @@ const MainScreen = ({ navigation, route }) => {
   const handlePlay = () => {
     // if (route.params.level == 'Urdu') { UrduCustomVoice()}
     // else {
-      if (text.length > 0) Tts.speak(text);
-      else if (route?.params?.val?.data) { Tts.speak(route.params.val.data.toString()) }
+    if (text.length > 0) Tts.speak(text);
+    else if (route?.params?.val?.data) { Tts.speak(route.params.val.data.toString()) }
     // }
   };
   const UrduCustomVoice = () => {
-   
   };
   return (
     <View style={{ flex: 1, }}>
@@ -144,16 +144,16 @@ const MainScreen = ({ navigation, route }) => {
 
             </View>
           </View>
-          <View style={{ flex: 5, alignItems: 'center', justifyContent: "center" }}>
+          <View style={{ flex: 5, alignItems: 'center', justifyContent: "center", }}>
             {route.params.level == 'English' &&
-              <Image source={require('../../assets/apple.png')} />
+              getImage(route.params.val.data)
             }
           </View>
           <Button
             callBack={() => navigation.pop()}
             title={`Back`}
             titleStyle={styles.titleStyle(Colors.primary)}
-            customStyle={[styles.customStyle(Colors.white), { marginTop: '0%', }]}
+            customStyle={[styles.customStyle(Colors.white)]}
           />
         </View>
       </LinearGradient>
