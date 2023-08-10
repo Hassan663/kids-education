@@ -38,7 +38,7 @@ const Level = ({ navigation, route }) => {
       dataArray = Array.from({ length: 26 }, (_, index) => String.fromCharCode(97 + index)); // 'a' to 'z'
       setname('ALPHABET')
     } else if (levelName == `Urdu`) {
-      dataArray = ["ا", "ب", "پ", "ت", "ٹ", "ث", "ج", "چ", "ح", "خ", "د", "ڈ", "ذ", "ر", "ڑ", "ز", "ژ", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ک", "گ", "ل", "م", "ن", "ں", "ه", "و", "ء", "ی", "ے"];
+      dataArray = ["ا", "ب", "پ", "ت", "ٹ", "ث", "ج", "چ", "ح", "خ", "د", "ڈ", "ذ", "ر", "ڑ", "ز", "ژ", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ک", "گ", "ل", "م", "ن",  "ه", "و", "ء", "ی", "ے"];
       setname('حرف')
     } else if (levelName == `Number`) {
       let numberData = []
