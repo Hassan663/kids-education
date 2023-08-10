@@ -135,44 +135,44 @@ const MainScreen = ({ navigation, route }) => {
     // , "ے"];
 
     if (route.params.level == 'Urdu') {
-      if (route.params.val.data.toUpperCase() == `ا`) { setText(`انگور`); setVoice(`ungooor`) }
-      if (route.params.val.data.toUpperCase() == `ب`) { setText(`بلی`); setVoice(`Billi`) }
-      if (route.params.val.data.toUpperCase() == `پ`) { setText(`پیاز`); setVoice(`peyaaz`) }
-      if (route.params.val.data.toUpperCase() == `ت`) { setText(`تتلی`); setVoice(`tetlee`) }
-      if (route.params.val.data.toUpperCase() == `ٹ`) { setText(`ٹیلی ویژن`); setVoice(`Television`) }
-      if (route.params.val.data.toUpperCase() == `ث`) { setText(`سمر`); setVoice(`samar`) }
-      if (route.params.val.data.toUpperCase() == `ج`) { setText(`جہاز`); setVoice(`jahaz`) }
-      if (route.params.val.data.toUpperCase() == `چ`) { setText(`چابی`); setVoice(`chabi`) }
-      if (route.params.val.data.toUpperCase() == `ح`) { setText(`حلوہ`); setVoice(`halwa`) }
-      if (route.params.val.data.toUpperCase() == `خ`) { setText(`خرگوش`); setVoice(`khargosh`) }
-      if (route.params.val.data.toUpperCase() == `د`) { setText(`درخت`); setVoice(`darakht`) }
-      if (route.params.val.data.toUpperCase() == `ڈ`) { setText(`ڈاکٹر`); setVoice(`doctur`) }
-      if (route.params.val.data.toUpperCase() == `ذ`) { setText(`ذخیرہ`); setVoice(`Zakhira`) }
-      if (route.params.val.data.toUpperCase() == `ر`) { setText(`رسی `); setVoice(`rassi`) }
-      if (route.params.val.data.toUpperCase() == `ڑ`) { setText(`گاڑی`); setVoice(`gari`) }
-      if (route.params.val.data.toUpperCase() == `ز`) { setText(`زرافہ`); setVoice(`Zarafa`) }
-      if (route.params.val.data.toUpperCase() == `ژ`) { setText(`ٹیلی ویژن`); setVoice(`Television`) }
-      if (route.params.val.data.toUpperCase() == `س`) { setText(`سیب`); setVoice(`Seb`) }
-      if (route.params.val.data.toUpperCase() == `ش`) { setText(`شیر`); setVoice(`Sher`) }
-      if (route.params.val.data.toUpperCase() == `ص`) { setText(`صابُن`); setVoice(`Sabun`) }
-      if (route.params.val.data.toUpperCase() == `ض`) { setText(`ضعیف`); setVoice(`zaeef`) }
-      if (route.params.val.data.toUpperCase() == `ط`) { setText(`طوطا`); setVoice(`Tota`) }
-      if (route.params.val.data.toUpperCase() == `ظ`) { setText(`ظروف`); setVoice(`zaroof`) }
-      if (route.params.val.data.toUpperCase() == `ع`) { setText(`عنق`); setVoice(`ainak`) }
-      if (route.params.val.data.toUpperCase() == `غ`) { setText(`غبارہ`); setVoice(`Ghubara`) }
-      if (route.params.val.data.toUpperCase() == `ف`) { setText(`فوارہ`); setVoice(`faowara`) }
-      if (route.params.val.data.toUpperCase() == `ق`) { setText(`قلم`); setVoice(`qalam`) }
-      if (route.params.val.data.toUpperCase() == `ک`) { setText(`کرسی`); setVoice(`Kursi`) }
-      if (route.params.val.data.toUpperCase() == `گ`) { setText(`گاجر`); setVoice(`Gajar`) }
-      if (route.params.val.data.toUpperCase() == `ل`) { setText(`لیمو`); setVoice(`Leemo`) }
-      if (route.params.val.data.toUpperCase() == `م`) { setText(`مچھلی`); setVoice(`Machli`) }
-      if (route.params.val.data.toUpperCase() == `ن`) { setText(`ناریل`); setVoice(`Naryal`) }
+      if (route.params.val.data.toUpperCase() == `ا`) { setText(`انگور`); setVoice(`انگور`) }
+      if (route.params.val.data.toUpperCase() == `ب`) { setText(`بلی`); setVoice(`بلی`) }
+      if (route.params.val.data.toUpperCase() == `پ`) { setText(`پیاز`); setVoice(`پیاز`) }
+      if (route.params.val.data.toUpperCase() == `ت`) { setText(`تتلی`); setVoice(`تتلی`) }
+      if (route.params.val.data.toUpperCase() == `ٹ`) { setText(`ٹیلی ویژن`); setVoice(`ٹیلی ویژن`) }
+      if (route.params.val.data.toUpperCase() == `ث`) { setText(`سمر`); setVoice(`سمر`) }
+      if (route.params.val.data.toUpperCase() == `ج`) { setText(`جہاز`); setVoice(`جہاز`) }
+      if (route.params.val.data.toUpperCase() == `چ`) { setText(`چابی`); setVoice(`چابی`) }
+      if (route.params.val.data.toUpperCase() == `ح`) { setText(`حلوہ`); setVoice(`حلوہ`) }
+      if (route.params.val.data.toUpperCase() == `خ`) { setText(`خرگوش`); setVoice(`خرگوش`) }
+      if (route.params.val.data.toUpperCase() == `د`) { setText(`درخت`); setVoice(`درخت`) }
+      if (route.params.val.data.toUpperCase() == `ڈ`) { setText(`ڈاکٹر`); setVoice(`ڈاکٹر`) }
+      if (route.params.val.data.toUpperCase() == `ذ`) { setText(`ذخیرہ`); setVoice(`ذخیرہ`) }
+      if (route.params.val.data.toUpperCase() == `ر`) { setText(`رسی `); setVoice(`رسی `) }
+      if (route.params.val.data.toUpperCase() == `ڑ`) { setText(`گاڑی`); setVoice(`گاڑی`) }
+      if (route.params.val.data.toUpperCase() == `ز`) { setText(`زرافہ`); setVoice(`زرافہ`) }
+      if (route.params.val.data.toUpperCase() == `ژ`) { setText(`ٹیلی ویژن`); setVoice(`ٹیلی ویژن`) }
+      if (route.params.val.data.toUpperCase() == `س`) { setText(`سیب`); setVoice(`سیب`) }
+      if (route.params.val.data.toUpperCase() == `ش`) { setText(`شیر`); setVoice(`شیر`) }
+      if (route.params.val.data.toUpperCase() == `ص`) { setText(`صابُن`); setVoice(`صابُن`) }
+      if (route.params.val.data.toUpperCase() == `ض`) { setText(`ضعیف`); setVoice(`ضعیف`) }
+      if (route.params.val.data.toUpperCase() == `ط`) { setText(`طوطا`); setVoice(`طوطا`) }
+      if (route.params.val.data.toUpperCase() == `ظ`) { setText(`ظروف`); setVoice(`ظروف`) }
+      if (route.params.val.data.toUpperCase() == `ع`) { setText(`عنق`); setVoice(`عنق`) }
+      if (route.params.val.data.toUpperCase() == `غ`) { setText(`غبارہ`); setVoice(`غبارہ`) }
+      if (route.params.val.data.toUpperCase() == `ف`) { setText(`فوارہ`); setVoice(`فوارہ`) }
+      if (route.params.val.data.toUpperCase() == `ق`) { setText(`قلم`); setVoice(`قلم`) }
+      if (route.params.val.data.toUpperCase() == `ک`) { setText(`کرسی`); setVoice(`کرسی`) }
+      if (route.params.val.data.toUpperCase() == `گ`) { setText(`گاجر`); setVoice(`گاجر`) }
+      if (route.params.val.data.toUpperCase() == `ل`) { setText(`لیمو`); setVoice(`لیمو`) }
+      if (route.params.val.data.toUpperCase() == `م`) { setText(`مچھلی`); setVoice(`مچھلی`) }
+      if (route.params.val.data.toUpperCase() == `ن`) { setText(`ناریل`); setVoice(`ناریل`) }
       // if (route.params.val.data.toUpperCase() == `ں`) { setText(`انگور`); setVoice(`ungooor`) }
-      if (route.params.val.data.toUpperCase() == `و`) { setText(`ورزش`); setVoice(`Warzish`) }
-      if (route.params.val.data.toUpperCase() == `ه`) { setText(`ہیرا`); setVoice(`Heera`) }
+      if (route.params.val.data.toUpperCase() == `و`) { setText(`ورزش`); setVoice(`ورزش`) }
+      if (route.params.val.data.toUpperCase() == `ه`) { setText(`ہیرا`); setVoice(`ہیرا`) }
       // if (route.params.val.data.toUpperCase() == `ء`) { setText(`انگور`); setVoice(`Heera`) }
-      if (route.params.val.data.toUpperCase() == `ی`) { setText(`چائی`); setVoice(`chaai`) }
-      if (route.params.val.data.toUpperCase() == `ے`) { setText(`یاکا`); setVoice(`Yakka`) }
+      if (route.params.val.data.toUpperCase() == `ی`) { setText(`چائی`); setVoice(`چائی`) }
+      if (route.params.val.data.toUpperCase() == `ے`) { setText(`یاکا`); setVoice(`یاکا`) }
     }
 
 
