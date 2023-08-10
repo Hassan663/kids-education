@@ -94,105 +94,155 @@ const MainScreen = ({ navigation, route }) => {
       else if (route.params.val.data.toUpperCase() == `X`) { setText(`X-ray`) }
       else if (route.params.val.data.toUpperCase() == `Y`) { setText(`Yacht`) }
       else if (route.params.val.data.toUpperCase() == `Z`) { setText(`Zebra`) }
-      // dataArray = ["ا", "ب", "پ", "ت", "ٹ", "ث", "ج", "چ", "ح", "خ", "د", "ڈ", "ذ", "ر", "ڑ", "ز", "ژ", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ک", "گ", "ل", "م", "ن", "ں", "ه", "و", "ء", "ی", "ے"];
+    // dataArray = [
+    // , "ا"
+    // , "ب"
+    // , "پ"
+    // , "ت"
+    // , "ٹ"
+    // , "ث"
+    // , "ج"
+    // , "چ"
+    // , "ح"
+    // , "خ"
+    // , "د"
+    // , "ڈ"
+    // , "ذ"
+    // , "ر"
+    // , "ڑ"
+    // , "ز"
+    // , "ژ"
+    // , "س"
+    // , "ش"
+    // , "ص"
+    // , "ض"
+    // , "ط"
+    // , "ظ"
+    // , "ع"
+    // , "غ"
+    // , "ف"
+    // , "ق"
+    // , "ک"
+    // , "گ"
+    // , "ل"
+    // , "م"
+    // , "ن"
+    // , "ں"
+    // , "ه"
+    // , "و"
+    // , "ء"
+    // , "ی"
+    // , "ے"];
 
-      if (route.params.level == 'Urdu')
-      if (route.params.val.data.toUpperCase() == `ا`) { setText(`انگور`) ; setVoice(`ungooor`) }
-      else if (route.params.val.data.toUpperCase() == `ب`) { setText(`بلی`) ; setVoice(`Billi`) }
-      else if (route.params.val.data.toUpperCase() == `پ`) { setText(`پیاز`) ; setVoice(`peyaaz`) }
-      else if (route.params.val.data.toUpperCase() == `ت`) { setText(`تتلی`) ; setVoice(`tetlee`) }
-      else if (route.params.val.data.toUpperCase() == `ٹ`) { setText(`ٹماٹر`) ; setVoice(`Tamatar`) }
-      else if (route.params.val.data.toUpperCase() == `F`) { setText(`Frog`) ; setVoice(`ungooor`) }
-      else if (route.params.val.data.toUpperCase() == `G`) { setText(`Glass`) ; setVoice(`ungooor`) }
-      else if (route.params.val.data.toUpperCase() == `H`) { setText(`Hat`) ; setVoice(`ungooor`) }
-      else if (route.params.val.data.toUpperCase() == `I`) { setText(`Ice cream`) ; setVoice(`ungooor`) }
-      else if (route.params.val.data.toUpperCase() == `J`) { setText(`Jug`) ; setVoice(`ungooor`) }
-      else if (route.params.val.data.toUpperCase() == `K`) { setText(`Kite`) ; setVoice(`ungooor`) }
-      else if (route.params.val.data.toUpperCase() == `L`) { setText(`Lamp`) ; setVoice(`ungooor`) }
-      else if (route.params.val.data.toUpperCase() == `M`) { setText(`Monkey`) ; setVoice(`ungooor`) }
-      else if (route.params.val.data.toUpperCase() == `N`) { setText(`Net`) ; setVoice(`ungooor`) }
-      else if (route.params.val.data.toUpperCase() == `O`) { setText(`Onion`) ; setVoice(`ungooor`) }
-      else if (route.params.val.data.toUpperCase() == `P`) { setText(`Pen`) ; setVoice(`ungooor`) }
-      else if (route.params.val.data.toUpperCase() == `Q`) { setText(`Queen`) ; setVoice(`ungooor`) }
-      else if (route.params.val.data.toUpperCase() == `R`) { setText(`Ring`) ; setVoice(`ungooor`) }
-      else if (route.params.val.data.toUpperCase() == `S`) { setText(`Star`) ; setVoice(`ungooor`) }
-      else if (route.params.val.data.toUpperCase() == `T`) { setText(`Train`) ; setVoice(`ungooor`) }
-      else if (route.params.val.data.toUpperCase() == `U`) { setText(`Umbrella`) ; setVoice(`ungooor`) }
-      else if (route.params.val.data.toUpperCase() == `V`) { setText(`Van`) ; setVoice(`ungooor`) }
-      else if (route.params.val.data.toUpperCase() == `W`) { setText(`Watch`) ; setVoice(`ungooor`) }
-      else if (route.params.val.data.toUpperCase() == `X`) { setText(`X-ray`) ; setVoice(`ungooor`) }
-      else if (route.params.val.data.toUpperCase() == `Y`) { setText(`Yacht`) ; setVoice(`ungooor`) }
-      else if (route.params.val.data.toUpperCase() == `Z`) { setText(`Zebra`) ; setVoice(`ungooor`) }
+  if (route.params.level == 'Urdu') {
+    if (route.params.val.data.toUpperCase() == `ا`) { setText(`انگور`); setVoice(`ungooor`) }
+    if (route.params.val.data.toUpperCase() == `ب`) { { setText(`بلی`); setVoice(`Billi`) } }
+    if (route.params.val.data.toUpperCase() == `پ`) { { setText(`پیاز`); setVoice(`peyaaz`) } }
+    if (route.params.val.data.toUpperCase() == `ت`) { { setText(`تتلی`); setVoice(`tetlee`) } }
+    if (route.params.val.data.toUpperCase() == `ٹ`) { { setText(`ٹماٹر`); setVoice(`Tamatar`) } }
+    if (route.params.val.data.toUpperCase() == `ث`) { setText(`انگور`); setVoice(`samar`) }
+    if (route.params.val.data.toUpperCase() == `ج`) { setText(`انگور`); setVoice(`jahaz`) }
+    if (route.params.val.data.toUpperCase() == `چ`) { setText(`انگور`); setVoice(`chabi`) }
+    if (route.params.val.data.toUpperCase() == `ح`) { setText(`انگور`); setVoice(`halwa`) }
+    if (route.params.val.data.toUpperCase() == `خ`) { setText(`انگور`); setVoice(`khargosh`) }
+    if (route.params.val.data.toUpperCase() == `د`) { setText(`انگور`); setVoice(`darakht`) }
+    if (route.params.val.data.toUpperCase() == `ڈ`) { setText(`انگور`); setVoice(`doctur`) }
+    if (route.params.val.data.toUpperCase() == `ذ`) { setText(`انگور`); setVoice(`Zakhira`) }
+    if (route.params.val.data.toUpperCase() == `ر`) { setText(`انگور`); setVoice(`rassi`) }
+    if (route.params.val.data.toUpperCase() == `ڑ`) { setText(`انگور`); setVoice(`gari`) }
+    if (route.params.val.data.toUpperCase() == `ز`) { setText(`انگور`); setVoice(`Zarafa`) }
+    if (route.params.val.data.toUpperCase() == `ژ`) { setText(`انگور`); setVoice(`Television`) }
+    if (route.params.val.data.toUpperCase() == `س`) { setText(`انگور`); setVoice(`Seb`) }
+    if (route.params.val.data.toUpperCase() == `ش`) { setText(`انگور`); setVoice(`Sher`) }
+    if (route.params.val.data.toUpperCase() == `ص`) { setText(`انگور`); setVoice(`Sabun`) }
+    if (route.params.val.data.toUpperCase() == `ض`) { setText(`انگور`); setVoice(`zaeef`) }
+    if (route.params.val.data.toUpperCase() == `ط`) { setText(`انگور`); setVoice(`Tota`) }
+    if (route.params.val.data.toUpperCase() == `ظ`) { setText(`انگور`); setVoice(`zaroof`) }
+    if (route.params.val.data.toUpperCase() == `ع`) { setText(`انگور`); setVoice(`ainak`) }
+    if (route.params.val.data.toUpperCase() == `غ`) { setText(`انگور`); setVoice(`Ghubara`) }
+    if (route.params.val.data.toUpperCase() == `ف`) { setText(`انگور`); setVoice(`faowara`) }
+    if (route.params.val.data.toUpperCase() == `ق`) { setText(`انگور`); setVoice(`qalam`) }
+    if (route.params.val.data.toUpperCase() == `ک`) { setText(`انگور`); setVoice(`Kursi`) }
+    if (route.params.val.data.toUpperCase() == `گ`) { setText(`انگور`); setVoice(`Gajar`) }
+    if (route.params.val.data.toUpperCase() == `ل`) { setText(`انگور`); setVoice(`Leemo`) }
+    if (route.params.val.data.toUpperCase() == `م`) { setText(`انگور`); setVoice(`Machli`) }
+    if (route.params.val.data.toUpperCase() == `ن`) { setText(`انگور`); setVoice(`Naryal`) }
+    if (route.params.val.data.toUpperCase() == `ں`) { setText(`انگور`); setVoice(`ungooor`) }
+    if (route.params.val.data.toUpperCase() == `ه`) { setText(`انگور`); setVoice(`ungooor`) }
+    if (route.params.val.data.toUpperCase() == `و`) { setText(`انگور`); setVoice(`Warzish`) }
+    if (route.params.val.data.toUpperCase() == `ء`) { setText(`انگور`); setVoice(`Heera`) }
+    if (route.params.val.data.toUpperCase() == `ی`) { setText(`انگور`); setVoice(`chaai`) }
+    if (route.params.val.data.toUpperCase() == `ے`) { setText(`انگور`); setVoice(`Yakka`) }
+   }
 
 
+}, [])
+const handlePlay = () => {
 
-  }, [])
-  const handlePlay = () => {
-   
-    if (voice.length > 0) Tts.speak(voice);
-    // For maths
-    else if (route?.params?.val?.data) { Tts.speak(route.params.val.data.toString()) }
-  };
-  const UrduCustomVoice = () => {
-  };
-  return (
-    <View style={{ flex: 1, }}>
-      <LinearGradient colors={['#B0CEE3', `rgba(176, 206, 227, 0.00)`]} style={{ flex: 8 }}>
-        <View style={{ flex: 1, paddingHorizontal: RFPercentage(2) }}>
-          <SafeAreaView style={{ flexDirection: 'row', justifyContent: "space-between", }}>
+  if (voice.length > 0) Tts.speak(voice);
+  // For maths
+  else if (route?.params?.val?.data) { Tts.speak(route.params.val.data.toString()) }
+};
+const UrduCustomVoice = () => {
+};
+return (
+  <View style={{ flex: 1, }}>
+    <LinearGradient colors={['#B0CEE3', `rgba(176, 206, 227, 0.00)`]} style={{ flex: 8 }}>
+      <View style={{ flex: 1, paddingHorizontal: RFPercentage(2) }}>
+        <SafeAreaView style={{ flexDirection: 'row', justifyContent: "space-between", }}>
 
-            <Button
-              title={`PLAY`}
-
-              callBack={handlePlay}
-              titleStyle={styles.titleStyle(Colors.white)}
-              customStyle={styles.customStyle('#36C02A')}
-            />
-            <Button
-              title={Score.length}
-              titleStyle={styles.titleStyle(Colors.black)}
-              customStyle={styles.customStyle('#FFB800')}
-            />
-          </SafeAreaView>
-          <View style={{
-            flex: 4, flexDirection: 'row',
-            alignItems: 'center'
-          }}>
-            <Image source={require('../../assets/sound.png')} />
-            <View style={{ height: RFPercentage(10), justifyContent: "center", padding: RFPercentage(2), marginHorizontal: RFPercentage(3), width: "70%", backgroundColor: Colors.white, borderRadius: RFPercentage(2) }}>
-              {text.length > 0 ?
-                <Text style={{
-                  fontSize: 16,
-                  fontFamily: 'LuckiestGuy-Regular',
-                  color: Colors.black,
-                }}>{text}</Text>
-                :
-                <Text style={{
-                  fontSize: 16,
-                  fontFamily: 'LuckiestGuy-Regular',
-                  color: Colors.black,
-                }}>{route?.params?.val?.data}</Text>
-              }
-
-            </View>
-          </View>
-          <View style={{ flex: 5, alignItems: 'center', justifyContent: "center", }}>
-            {route.params.level == 'English' &&
-              getImage(route.params.val.data)
-            }
-          </View>
           <Button
-            callBack={() => navigation.pop()}
-            title={`Back`}
-            titleStyle={styles.titleStyle(Colors.primary)}
-            customStyle={[styles.customStyle(Colors.white)]}
+            title={`PLAY`}
+
+            callBack={handlePlay}
+            titleStyle={styles.titleStyle(Colors.white)}
+            customStyle={styles.customStyle('#36C02A')}
           />
+          <Button
+            title={Score.length}
+            titleStyle={styles.titleStyle(Colors.black)}
+            customStyle={styles.customStyle('#FFB800')}
+          />
+        </SafeAreaView>
+        <View style={{
+          flex: 4, flexDirection: 'row',
+          alignItems: 'center'
+        }}>
+          <Image source={require('../../assets/sound.png')} />
+          <View style={{ height: RFPercentage(10), justifyContent: "center", padding: RFPercentage(2), marginHorizontal: RFPercentage(3), width: "70%", backgroundColor: Colors.white, borderRadius: RFPercentage(2) }}>
+            {text.length > 0 ?
+              <Text style={{
+                fontSize: 16,
+                fontFamily: 'LuckiestGuy-Regular',
+                color: Colors.black,
+              }}>{text}</Text>
+              :
+              <Text style={{
+                fontSize: 16,
+                fontFamily: 'LuckiestGuy-Regular',
+                color: Colors.black,
+              }}>{route?.params?.val?.data}</Text>
+            }
+
+          </View>
         </View>
-      </LinearGradient>
-      <View onPress={() => { }} style={{ flex: 2 }}>
-        <Image resizeMode='cover' style={{ height: '100%', width: "100%" }} source={require('../../assets/gras.png')} />
+        <View style={{ flex: 5, alignItems: 'center', justifyContent: "center", }}>
+          {route.params.level == 'English' &&
+            getImage(route.params.val.data)
+          }
+        </View>
+        <Button
+          callBack={() => navigation.pop()}
+          title={`Back`}
+          titleStyle={styles.titleStyle(Colors.primary)}
+          customStyle={[styles.customStyle(Colors.white)]}
+        />
       </View>
-    </View >
-  );
+    </LinearGradient>
+    <View onPress={() => { }} style={{ flex: 2 }}>
+      <Image resizeMode='cover' style={{ height: '100%', width: "100%" }} source={require('../../assets/gras.png')} />
+    </View>
+  </View >
+);
 };
 export default MainScreen;
