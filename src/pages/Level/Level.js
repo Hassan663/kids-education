@@ -38,7 +38,7 @@ const Level = ({ navigation, route }) => {
       dataArray = Array.from({ length: 26 }, (_, index) => String.fromCharCode(97 + index)); // 'a' to 'z'
       setname('ALPHABET')
     } else if (levelName == `Urdu`) {
-      dataArray = ["ا", "ب", "پ", "ت", "ٹ", "ث", "ج", "چ", "ح", "خ", "د", "ڈ", "ذ", "ر", "ڑ", "ز", "ژ", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ک", "گ", "ل", "م", "ن",  "ه", "و", "ء", "ی", "ے"];
+      dataArray = ["ا", "ب", "پ", "ت", "ٹ", "ث", "ج", "چ", "ح", "خ", "د", "ڈ", "ذ", "ر", "ڑ", "ز", "ژ", "س", "ش", "ص", "ض", "ط", "ظ", "ع", "غ", "ف", "ق", "ک", "گ", "ل", "م", "ن", "ه", "و", "ء", "ی",];
       setname('حرف')
     } else if (levelName == `Number`) {
       let numberData = []
@@ -72,9 +72,13 @@ const Level = ({ navigation, route }) => {
             <FlatList
               data={dataArray}
               numColumns={2}
-              columnWrapperStyle={{ justifyContent: "space-around", }}
+              columnWrapperStyle={{
+                flexDirection: route.params.level == `English` ? 'row' : 'row-reverse',
+                justifyContent: "space-around",
+              }}
               renderItem={({ item, index }) => {
                 return (
+
                   <TouchableOpacity
                     onPress={() => {
                       navigation.navigate('MainScreen', { level: route.params.level, val: item })

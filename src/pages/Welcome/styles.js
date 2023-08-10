@@ -3,7 +3,7 @@ import { RFPercentage } from 'react-native-responsive-fontsize';
 import Colors from '../../styles/Colors';
 export const styles = StyleSheet.create({
     container: {
-        flex: 1, backgroundColor: 'red'
+        flex: 1,
     },
     welcomeHeading: {
         color: Colors.primary,
