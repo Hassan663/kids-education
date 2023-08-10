@@ -227,9 +227,9 @@ const MainScreen = ({ navigation, route }) => {
             </View>
           </View>
           <View style={{ flex: 5, alignItems: 'center', justifyContent: "center", }}>
-            {/* {route.params.level == 'English' && */}
-            {route.params.val.data &&
-              getImage(route.params.val.data)
+            {(route.params.level == 'English' || route.params.level == 'Urdu') &&
+              // {route?.params?.val?.data &&
+              getImage(route?.params?.val?.data)
             }
           </View>
           <Button
