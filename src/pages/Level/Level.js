@@ -73,7 +73,7 @@ const Level = ({ navigation, route }) => {
               data={dataArray}
               numColumns={2}
               columnWrapperStyle={{
-                flexDirection: route.params.level == `English` ? 'row' : 'row-reverse',
+                flexDirection: route.params.level == `Urdu` ? 'row-reverse' : 'row',
                 justifyContent: "space-around",
               }}
               renderItem={({ item, index }) => {
