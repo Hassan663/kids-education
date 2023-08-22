@@ -9,46 +9,42 @@ import {
 import { styles } from './styles';
 import Button from '../../components/Button';
 import { AppOpenAd, InterstitialAd, RewardedAd, BannerAd, TestIds, BannerAdSize, AdEventType, RewardedAdEventType } from 'react-native-google-mobile-ads';
-const adUnitId = __DEV__ ? TestIds.INTERSTITIAL : 'ca-app-pub-3340464236132360/1338586768';
-console.log(adUnitId,'adUnitId')
-const interstitial = InterstitialAd.createForAdRequest(adUnitId, {
+
+// const interstitialId = __DEV__ ? TestIds.INTERSTITIAL : 'ca-app-pub-3340464236132360/1338586768';
+const interstitialId = 'ca-app-pub-3340464236132360/1338586768';
+// const adUnitId2 = 'ca-app-pub-3340464236132360/2693413925';
+
+
+const interstitial = InterstitialAd.createForAdRequest(interstitialId, {
   requestNonPersonalizedAdsOnly: true,
   keywords: ['fashion', 'clothing'],
 });
+
 const Welcome = ({ navigation }) => {
 
+  {/* INTERSTITIAL */ }
   useEffect(async () => {
-    // await screenTrace()
-    // crashlytics().log('code mounted.');
-    // crashlytics().crash();
-    // const trace = await perf().startTrace('get_Code');
-
-    // setCodeForUI()
-
-    // await trace.stop();
-    const unsubscribe = interstitial.addAdEventListener(AdEventType.LOADED, () => {
-      interstitial.show();
-    });
-    // Start loading the interstitial straight away
+    const unsubscribe = interstitial.addAdEventListener(AdEventType.LOADED, () => { interstitial.show(); });
     interstitial.load();
-    // Unsubscribe from events on unmount
     return unsubscribe;
-
   }, [])
+  {/* INTERSTITIAL */ }
+
   return (
     <View style={styles.container}>
+      {/* BANNER */}
       {/* <View style={{ width: '100%', alignItems: 'center' }}>
-
         <BannerAd
           size={BannerAdSize.BANNER}
           // unitId={'ca-app-pub-3340464236132360/7129135347'}
-          unitId={adUnitId}
+          unitId={adUnitId2}
           // unitId={"ca-app-pub-9152919921144751/4080981743"} 
           requestOptions={{
             requestNonPersonalizedAdsOnly: true,
           }}
         />
       </View> */}
+      {/* BANNER */}
       <ImageBackground
         style={styles.welcomeBg}
         resizeMode='cover'
