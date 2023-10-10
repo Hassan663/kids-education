@@ -18,7 +18,8 @@ export const styles = StyleSheet.create({
     imgItem: {
         height: "100%",
         width: '100%',
-        resizeMode:"contain"
+        resizeMode: "contain"
     },
+    buttonContainer: { flexDirection: 'row', alignSelf: "center", },
 
 });

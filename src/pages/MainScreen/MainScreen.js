@@ -68,7 +68,7 @@ const MainScreen = ({ navigation, route }) => {
       Tts.setDefaultLanguage('en-US');
     }
 
-     if (route.params.level == 'English')
+    if (route.params.level == 'English')
       if (route.params.val.data.toUpperCase() == `A`) { setText(`Apple`); setVoice('Apple') }
       else if (route.params.val.data.toUpperCase() == `B`) { setText(`Ball`); setVoice('Ball') }
       else if (route.params.val.data.toUpperCase() == `C`) { setText(`Cat`); setVoice('Cat') }
@@ -214,12 +214,22 @@ const MainScreen = ({ navigation, route }) => {
               getImage(route?.params?.val?.data)
             }
           </View>
-          <Button
-            callBack={() => navigation.pop()}
-            title={`Back`}
-            titleStyle={styles.titleStyle(Colors.primary)}
-            customStyle={[styles.customStyle(Colors.white)]}
-          />
+
+          <View style={styles.buttonContainer}>
+            <Button
+              callBack={() => navigation.pop()}
+              title={`Back`}
+              titleStyle={styles.titleStyle(Colors.primary)}
+              customStyle={[styles.customStyle(Colors.white), { marginHorizontal: 10 }]}
+            />
+            <Button
+              title={`PLAY`}
+
+              callBack={handlePlay}
+              titleStyle={styles.titleStyle(Colors.white)}
+              customStyle={[styles.customStyle('#36C02A'), { marginHorizontal: 10 }]}
+            />
+          </View>
         </View>
       </LinearGradient>
       <View onPress={() => { }} style={{ flex: 2 }}>
